@@ -1,7 +1,7 @@
 Alias: $SCT = http://snomed.info/sct
 
-CodeSystem: SACQPatientComorbidityHistory
-Id: SACQPatientComorbidityHistory
+CodeSystem: SACQPatientComorbidityCodeSystem
+Id: SACQPatientComorbidity
 Title: "SACQ patient's comorbidity history"
 Description: "Codes used in SACQ patient's comorbidity history that are not available yet in standard terminologies"
 * ^url =  http://connect.ichom.org/fhir/CodeSystem/sacq-patient-comorbidity-history
@@ -11,13 +11,15 @@ Description: "Codes used in SACQ patient's comorbidity history that are not avai
 * #cancer-within-5yrs "Cancer/other cancer (within last 5 years)"
 * #other-medical-problems "Other medical problems"
   "Other medical problems affecting the patient, outside of those that have been asked explicitly"
+* #receive-treatment "receive treatment"
+* #limit-activities "limit your activities"
 
 
 ValueSet: SACQPatientComorbidityHistory
 Id: SACQ-patient-comorbidity-history
 Title: "SACQ Patient's comorbidity history"
 Description: "Patient's documented history of comorbidities"
-* SACQPatientComorbidityHistory#no-other-diseases
+* SACQPatientComorbidityCodeSystem#no-other-diseases
 * $SCT#56265001 "Heart disease (For example, angina, heart attack, or heart failure)"
 * $SCT#38341003 "High blood pressure"
 * $SCT#19829001 "Lung disease (For example,  asthma, chronic bronchitis, or emphysema)"
@@ -26,9 +28,17 @@ Description: "Patient's documented history of comorbidities"
 * $SCT#90708001 "Kidney disease"
 * $SCT#235856003 "Liver disease"
 * $SCT#271737000 "Anemia"
-* SACQPatientComorbidityHistory#cancer-within-5yrs
+* SACQPatientComorbidityCodeSystem#cancer-within-5yrs
 * $SCT#35489007 "Depression"
 * $SCT#396275006 "Osteoarthritis"
 * $SCT#161891005 "Back pain"
 * $SCT#69896004 "Rheumatoid arthritis"
-* SACQPatientComorbidityHistory#other-medical-problems
+* SACQPatientComorbidityCodeSystem#other-medical-problems
+
+
+ValueSet: SACQPatientComorbidityImpact
+Id: SACQ-patient-comorbidity-impact
+Title: "SACQ Patient's comorbidity impact"
+Description: "Patient's comorbidities impact"
+* SACQPatientComorbidityCodeSystem#receive-treatment "receive treatment"
+* SACQPatientComorbidityCodeSystem#limit-activities  "limit your activities"

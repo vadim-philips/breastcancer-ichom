@@ -1,7 +1,6 @@
 // shorthand notation to only show a particular question in the context of this questionnaire
 
-
-Instance: SACQComorbidities
+Instance: SACQComorbidities2
 InstanceOf: Questionnaire
 Usage: #definition
 Title: "SACQ comorbidities"
@@ -186,4 +185,4 @@ Description: "Based upon the Self-administered Comorbidity Questionnaire (Sangha
   * type = #integer
   * text = "What is the total summed score of the patient's SACQ responses?"
   * readOnly = true
-  * insert calculatedFhirPathExpression("%resource.item.where(linkId.startsWith(`ComorbiditiesSACQ_`).answer.where(value=true).count()")
+  * insert calculatedFhirPathExpression("%resource.item.where(linkId = 'ComorbiditiesSACQ').answer.count() + %resource.item.where(linkId.startsWith('ComorbiditiesSACQ_') and linkId.contains('Score').not()).answer.where(value=true).count()")
