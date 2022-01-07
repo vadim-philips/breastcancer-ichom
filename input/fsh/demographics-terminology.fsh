@@ -68,3 +68,11 @@ Description: "Menopausal Status"
 * MenopausalStatusCS#0
 * MenopausalStatusCS#1
 * MenopausalStatusCS#2
+
+ValueSet: SACQPatientComorbidityImpact
+Id: SACQ-patient-comorbidity-impact
+Title: "SACQ Patient's comorbidity impact"
+Description: "Patient's comorbidities impact"
+* SACQPatientComorbidityCodeSystem#receive-treatment "receive treatment"
+* SACQPatientComorbidityCodeSystem#limit-activities  "limit your activities"
+* SACQPatientComorbidityCodeSystem#other-medical-problems

@@ -13,7 +13,8 @@ Description: "Codes used in SACQ patient's comorbidity history that are not avai
 * #cancer-within-5yrs "Cancer/other cancer (within last 5 years)"
 * #other-medical-problems "Other medical problems"
   "Other medical problems affecting the patient, outside of those that have been asked explicitly"
-
+* #receive-treatment "receive treatment"
+* #limit-activities  "limit your activities"
 
 ValueSet: SACQPatientComorbidityHistory
 Id: SACQ-patient-comorbidity-history
