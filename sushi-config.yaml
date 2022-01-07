@@ -2,7 +2,7 @@
 # │  The properties below are used to create the ImplementationGuide resource. For a list of       │
 # │  supported properties, see: https://fshschool.org/docs/sushi/configuration/                    │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
-id: breastcancer.ichom
+id: hl7.fhir.uv.ichom.breastcancer
 canonical: https://connect.ichom.org/fhir
 name: Breast Cancer - ICHOM
 title: "ICHOM FHIR Implementation Guide: Breast Cancer"
@@ -11,6 +11,7 @@ version: 0.0.1
 fhirVersion: 4.0.1
 copyrightYear: 2021+
 releaseLabel: ci-build
+jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 publisher:
   name: ICHOM
   url: https://ichom.org
@@ -24,9 +25,7 @@ pages:
     title: Standard Set
   4_security.md:
     title: Security
-  5_hl7-fhir-basics.md:
-    title: HL7 FHIR Basics
-  6_examples.md:
+  5_examples.md:
     title: Examples
 
 # ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
@@ -37,6 +36,5 @@ menu:
   Use Cases: 2_use-cases.html
   Standard Set: 3_standard-set.html
   Security: 4_security.html
-  HL7 FHIR Basics: 5_hl7-fhir-basics.html
-  Examples: 6_examples.html
+  Examples: 5_examples.html
   Artifacts: artifacts.html

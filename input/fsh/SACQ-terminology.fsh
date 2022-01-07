@@ -1,5 +1,7 @@
 Alias: $SCT = http://snomed.info/sct
 
+// standard set is published separately for re-use in other IGs
+
 CodeSystem: SACQPatientComorbidityCodeSystem
 Id: SACQPatientComorbidity
 Title: "SACQ patient's comorbidity history"
@@ -11,8 +13,6 @@ Description: "Codes used in SACQ patient's comorbidity history that are not avai
 * #cancer-within-5yrs "Cancer/other cancer (within last 5 years)"
 * #other-medical-problems "Other medical problems"
   "Other medical problems affecting the patient, outside of those that have been asked explicitly"
-* #receive-treatment "receive treatment"
-* #limit-activities "limit your activities"
 
 
 ValueSet: SACQPatientComorbidityHistory
@@ -34,11 +34,3 @@ Description: "Patient's documented history of comorbidities"
 * $SCT#161891005 "Back pain"
 * $SCT#69896004 "Rheumatoid arthritis"
 * SACQPatientComorbidityCodeSystem#other-medical-problems
-
-
-ValueSet: SACQPatientComorbidityImpact
-Id: SACQ-patient-comorbidity-impact
-Title: "SACQ Patient's comorbidity impact"
-Description: "Patient's comorbidities impact"
-* SACQPatientComorbidityCodeSystem#receive-treatment "receive treatment"
-* SACQPatientComorbidityCodeSystem#limit-activities  "limit your activities"
