@@ -3,11 +3,11 @@
 Instance: SACQComorbidities2
 InstanceOf: Questionnaire
 Usage: #definition
-Title: "SACQ comorbidities"
 Description: "Based upon the Self-administered Comorbidity Questionnaire (Sangha et al, 2003)."
 * insert PublicationInstanceRuleset
 
-* name = "SACQComorbidities"
+* name = "SACQComorbidities2"
+* title = "SACQ comorbidities2"
 * status = #draft
 
 * item[+]
@@ -191,3 +191,5 @@ Description: "Based upon the Self-administered Comorbidity Questionnaire (Sangha
     * text = "What is the total summed score of the patient's SACQ responses?"
     * readOnly = true
     * insert calculatedFhirPathExpression("%resource.item.where(linkId = 'ComorbiditiesSACQ'\).answer.count(\) + %resource.item.where(linkId.startsWith('ComorbiditiesSACQ_'\) and linkId.contains('Score'\).not(\)\).answer.where(value=true\).count(\)")
+
+
